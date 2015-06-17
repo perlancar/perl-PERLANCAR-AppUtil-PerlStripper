@@ -9,8 +9,8 @@ use warnings;
 
 1;
 
-# BEGIN_BLOCK: add_stripper_args_to_meta
-sub add_stripper_args_to_meta {
+# BEGIN_BLOCK: _add_stripper_args_to_meta
+sub _add_stripper_args_to_meta {
     my $meta = shift;
 
     # already added
@@ -112,7 +112,7 @@ _
 
     [200];
 }
-# END_BLOCK: add_stripper_args_to_meta
+# END_BLOCK: _add_stripper_args_to_meta
 
 1;
 # ABSTRACT: Utilities for PERLANCAR's applications, related to Perl::Stripper
