@@ -1,5 +1,10 @@
 Revision history for PERLANCAR-AppUtil-PerlStripper
 
+0.02    2015-06-17 (PERLANCAR)
+
+	- Fix args_rels setting.
+
+
 0.01    2015-06-17 (PERLANCAR)
 
         - First release.
