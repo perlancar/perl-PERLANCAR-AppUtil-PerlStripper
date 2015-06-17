@@ -89,25 +89,24 @@ _
 
     # XXX strip_log_levels
 
-    if ($meta->{args_rels}) {
-        my $ar = $meta->{args_rels};
-        my $prop;
-        if ($ar->{'dep_any&'}) {
-            $prop = $ar->{'dep_any&'};
-        } elsif (ref($ar->{'dep_any'}) eq 'ARRAY' && ($ar->{'dep_any.op'} // '') eq 'and') {
-            $prop = $ar->{'dep_any'};
-        } elsif (!$ar->{'dep_any'}) {
-            $ar->{'dep_any'} = {};
-            $prop = $ar->{'dep_any'};
-        }
-
-        if ($prop) {
-            push @$prop, [stripper_maintain_linum => [qw/stripper/]];
-            push @$prop, [stripper_ws             => [qw/stripper/]];
-            push @$prop, [stripper_log            => [qw/stripper/]];
-            push @$prop, [stripper_pod            => [qw/stripper/]];
-            push @$prop, [stripper_comment        => [qw/stripper/]];
-        }
+    $meta->{args_rels} //= {};
+    my $ar = $meta->{args_rels};
+    my $prop;
+    if ($ar->{'dep_any&'}) {
+        $prop = $ar->{'dep_any&'};
+    } elsif (ref($ar->{'dep_any'}) eq 'ARRAY' && ($ar->{'dep_any.op'} // '') eq 'and') {
+        $prop = $ar->{'dep_any'};
+    } elsif (!$ar->{'dep_any'}) {
+        $ar->{'dep_any'} = [];
+        $ar->{'dep_any.op'} = 'and';
+        $prop = $ar->{'dep_any'};
+    }
+    if ($prop) {
+        push @$prop, [stripper_maintain_linum => [qw/stripper/]];
+        push @$prop, [stripper_ws             => [qw/stripper/]];
+        push @$prop, [stripper_log            => [qw/stripper/]];
+        push @$prop, [stripper_pod            => [qw/stripper/]];
+        push @$prop, [stripper_comment        => [qw/stripper/]];
     }
 
     [200];
