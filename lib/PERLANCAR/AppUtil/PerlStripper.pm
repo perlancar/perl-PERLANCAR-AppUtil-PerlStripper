@@ -28,11 +28,6 @@ sub _add_stripper_args_to_meta {
         schema => ['bool'],
         default => 0,
         tags => ['category:stripping'],
-        description => <<'_',
-
-Only relevant when stripping using Perl::Stripper.
-
-_
     };
 
     $meta->{args}{stripper_ws} = {
@@ -41,11 +36,6 @@ _
         schema => ['bool'],
         default => 1,
         tags => ['category:stripping'],
-        description => <<'_',
-
-Only relevant when stripping using Perl::Stripper.
-
-_
     };
 
     $meta->{args}{stripper_comment} = {
@@ -53,11 +43,6 @@ _
         'summary.alt.bool.not' => "Set strip_comment=0 (don't strip comments) in Perl::Stripper",
         schema => ['bool'],
         default => 1,
-        description => <<'_',
-
-Only relevant when stripping using Perl::Stripper.
-
-_
         tags => ['category:stripping'],
     };
 
@@ -67,11 +52,6 @@ _
         schema => ['bool'],
         default => 1,
         tags => ['category:stripping'],
-        description => <<'_',
-
-Only relevant when stripping using Perl::Stripper.
-
-_
     };
 
     $meta->{args}{stripper_log} = {
@@ -80,11 +60,6 @@ _
         schema => ['bool'],
         default => 0,
         tags => ['category:stripping'],
-        description => <<'_',
-
-Only relevant when stripping using Perl::Stripper.
-
-_
     };
 
     # XXX strip_log_levels
