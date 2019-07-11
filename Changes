@@ -1,15 +1,15 @@
-0.03    2015-06-17 (PERLANCAR)
+0.03    2015-06-17  Released-By: PERLANCAR
 
 	- Remove description about only relevant under --stripper
 	  (redundant, we'll be able to generate this message from args_rels
 	  property; besides it's not apt for pmstripper).
 
 
-0.02    2015-06-17 (PERLANCAR)
+0.02    2015-06-17  Released-By: PERLANCAR
 
 	- Fix args_rels setting.
 
 
-0.01    2015-06-17 (PERLANCAR)
+0.01    2015-06-17  Released-By: PERLANCAR
 
         - First release.
